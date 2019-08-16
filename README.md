@@ -1,24 +1,40 @@
-# README
+# Ruby on Rails Event Schedular application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is part of the APIs project in The Odin Project’s Ruby on Rails Curriculum. For more information click --> [APIs]
+(https://www.theodinproject.com/courses/ruby-on-rails/lessons/apis)
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To get started with the app, clone the repo and then install the needed gems:
 
-* System dependencies
+```
+$ bundle install --without production
+```
 
-* Configuration
+Next, migrate the database:
 
-* Database creation
+```
+$ rails db:migrate
+```
+Now, run your server:
 
-* Database initialization
+```
+$ rails s
+```
+Now you can got http://localhost:3000 and create kittens.
 
-* How to run the test suite
+Next open your terminal and install rest-client gem (If you did not)
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ gem install rest-client
+```
+Next head to do irb and make json or xml formatted get requests like:
 
-* Deployment instructions
+```
+$ r = RestClient.get("http://localhost:3000/kittens", :accept => :json)
+$ p r
+```
 
-* ...
+# Authors
+
+* **Yunus Emre Aybey** - [YemreAybey](https://github.com/YemreAybey)
